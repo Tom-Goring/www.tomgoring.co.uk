@@ -49,18 +49,18 @@ table {
 
 /*********************************************************************************************/
 
+@font-face {
+    font-family: "Source Code Pro";
+}
+
 html {
     max-width: 100%;
     overflow-x: hidden;
     height: 100%;
-}
-
-body {
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .intro {
-    background: #0097ff;
     width: 100%;
     height: 100%;
     position: relative;
@@ -75,7 +75,27 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
+    z-index: -999;
 }
 
+#name {
+    text-align: center;
+    color: white;
+}
 
+#divider1 {
+    width: 200px;
+    color: white;
+}
 
+#current-position {
+    text-align: center;
+    color: white;
+}
+
+#title-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
