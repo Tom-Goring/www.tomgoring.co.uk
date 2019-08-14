@@ -75,9 +75,68 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
-section {
-    position: relative;
-    height: 100vh;
+p {
+    overflow-wrap: break-spaces;
+    text-align: justify;
+}
+
+h4 {
+    font-size: 1em;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.page {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    max-width: 45vw;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+.line {
+    display: block;
+    width: 23em;
+    padding: 0 !important;
+    background: rgba(165, 165, 165, 0.56);
+    height: 3px;
+}
+
+.section-title {
+    margin: 0 0 15px 0;
+    padding: 0;
+    font-size: 2.250em;
+    font-weight: 300;
+
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.row {
+    width: 100%;
+}
+
+.half-col {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.half-col {
+    width: 50.0%;
+}
+
+.section-content {
+    margin-top: 30px;
+    display: flex;
 }
 
 /*********************************************************************************************/
@@ -114,12 +173,6 @@ section {
     font-weight: 900;
     letter-spacing: 0.1em;
     white-space: nowrap;
-}
-
-#divider1 {
-    position: relative;
-    width: 23em;
-    color: white;
 }
 
 #current-position {
