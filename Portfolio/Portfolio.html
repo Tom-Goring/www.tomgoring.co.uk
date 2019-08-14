@@ -5,11 +5,12 @@
     <title>Tom Goring - Intern Software Engineer</title>
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
 </head>
 <body>
     <div id="wrapper">
-        <section id="intro-section">
+        <div id="intro-section" class="section">
                 <div id="title-container">
                     <div>
                         <h1 id="name">Tom Goring</h1>
@@ -22,17 +23,20 @@
                     </div>
                 </div>
                 <img id="image" src="../resources/johannes-plenio-FZpCcPss9to-unsplash.jpg" alt="coding">
-        </section>
+        </div>
 
-        <section id="about-me">
+        <div id="about-me" class="section"></div>
 
-        </section>
+        <div id="experience" class="section"></div>
 
-        <section id="experience"></section>
+        <div id="portfolio" class="section"></div>
 
-        <section id="portfolio"></section>
-
-        <section id="contact"></section>
+        <div id="contact" class="section"></div>
     </div>
+<script type="text/javascript">
+    var myFullPage = new fullpage('#wrapper', {
+        sectionsColor: ['white', 'red', 'blue', 'grey', 'green']
+    });
+</script>
 </body>
 </html>
