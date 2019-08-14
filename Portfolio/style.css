@@ -71,23 +71,23 @@ table {
 /*********************************************************************************************/
 
 html {
-    max-width: 100%;
     overflow-x: hidden;
-    height: 100%;
     font-family: 'Open Sans', sans-serif;
 }
 
 #wrapper {
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    scroll-snap-type: y proximity;
+    overflow: scroll;
+}
+
+section {
+    position: relative;
+    scroll-snap-align: center;
+    height: 100vh;
 }
 
 /*********************************************************************************************/
-
-#intro-section {
-    height: 100vh;
-    width: 100vw;
-}
 
 #image {
     float:top;
@@ -140,8 +140,18 @@ html {
 
 /*********************************************************************************************/
 
-#about-me-section {
-    height: 33vh;
-    width: 100%;
-    color: white;
+#about-me {
+    background-color: red;
+}
+
+#experience {
+    background-color: blue;
+}
+
+#portfolio {
+    background-color: grey;
+}
+
+#contact {
+    background-color: green;
 }
