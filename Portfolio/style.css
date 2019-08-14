@@ -75,15 +75,8 @@ html {
     font-family: 'Open Sans', sans-serif;
 }
 
-#wrapper {
-    height: 100vh;
-    scroll-snap-type: y proximity;
-    overflow: scroll;
-}
-
 section {
     position: relative;
-    scroll-snap-align: center;
     height: 100vh;
 }
 
@@ -96,7 +89,7 @@ section {
     height: 100%;
     width: 100%;
     position: absolute;
-    z-index: -999;
+    z-index: 0;
     filter: brightness(52%);
 }
 
@@ -108,6 +101,7 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 #name {
@@ -139,19 +133,3 @@ section {
 }
 
 /*********************************************************************************************/
-
-#about-me {
-    background-color: red;
-}
-
-#experience {
-    background-color: blue;
-}
-
-#portfolio {
-    background-color: grey;
-}
-
-#contact {
-    background-color: green;
-}
