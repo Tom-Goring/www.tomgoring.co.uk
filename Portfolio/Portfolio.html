@@ -11,9 +11,10 @@
     <script src="full-page-scroll.js"></script>
 </head>
 <body>
+    <div id="dots-container"></div>
     <div id="main" class="scroll-container">
-        <section class="section" id="title-section">
-            <div>
+        <section class="section" id="title-screen">
+            <div class="page">
                 <div id="title-container">
                     <div>
                         <h1 id="name">Tom Goring</h1>
@@ -27,9 +28,32 @@
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div>
-                <span>Section 2</span>
+        <section class="section" id="about-me">
+            <div class="page">
+                <div class="row">
+                    <h2 class="section-title centered">About me</h2>
+                    <div class="centered line"></div>
+                </div>
+                <div class="row section-content">
+                    <div class="half-col">
+                        <h4>Who am I?</h4>
+                        <p>Hello there. I'm Tom Goring, currently an Intern Software Engineer for Citrix Systems in
+                            Cambridge, UK on my placement year. I finished my second year of Computer Science in May of
+                            2019, and will be returning for my final year in September of 2021.</p>
+                        <p>Blah v2?</p>
+                        <p>Some img links to accounts?</p>
+                    </div>
+                    <div class="half-col">
+                        <h4>My Personal Interests</h4>
+                        <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </p>
+                        <ul>
+                            <li>Stuff 1</li>
+                            <li>Stuff 2</li>
+                            <li>Stuff 3</li>
+                            <li>Stuff 4</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section">
@@ -58,6 +82,5 @@
             animateFunction: 'ease'
         });
     </script>
-
 </body>
 </html>
