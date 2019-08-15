@@ -6,12 +6,14 @@
     <title>Tom Goring - Intern Software Engineer</title>
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+    <link href="scripts.js">
+    <link rel="stylesheet" href="full-page-scroll.css">
+    <script src="full-page-scroll.js"></script>
 </head>
 <body>
-    <div id="wrapper">
-        <div class="section">
+    <div id="main" class="scroll-container">
+        <section class="section" id="title-section">
+            <div>
                 <div id="title-container">
                     <div>
                         <h1 id="name">Tom Goring</h1>
@@ -23,48 +25,39 @@
                         <h4 id="current-position">Intern Software Engineer</h4>
                     </div>
                 </div>
-                <img id="image" src="../resources/johannes-plenio-FZpCcPss9to-unsplash.jpg" alt="coding">
-        </div>
-
-        <div id="about-me" class="section">
-            <div class="page">
-                <div class="row">
-                    <h2 class="section-title centered">About me</h2>
-                    <div class="centered line"></div>
-                </div>
-                <div class="row section-content">
-                    <div class="half-col">
-                        <h4>Who am I?</h4>
-                        <p>Hello there. I'm Tom Goring, currently an Intern Software Engineer for Citrix Systems in
-                        Cambridge, UK on my placement year. I finished my second year of Computer Science in May of
-                        2019, and will be returning for my final year in September of 2021.</p>
-                        <p>Blah v2?</p>
-                        <p>Some img links to accounts?</p>
-                    </div>
-                    <div class="half-col">
-                        <h4>My Personal Interests</h4>
-                        <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </p>
-                        <ul>
-                            <li>Stuff 1</li>
-                            <li>Stuff 2</li>
-                            <li>Stuff 3</li>
-                            <li>Stuff 4</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-        </div>
-
-        <div id="experience" class="section"></div>
-
-        <div id="portfolio" class="section"></div>
-
-        <div id="contact" class="section"></div>
+        </section>
+        <section class="section">
+            <div>
+                <span>Section 2</span>
+            </div>
+        </section>
+        <section class="section">
+            <div>
+                <span>Section 3</span>
+            </div>
+        </section>
+        <section class="section">
+            <div>
+                <span>Section 4</span>
+            </div>
+        </section>
+        <section class="section">
+            <div>
+                <span>Section 5</span>
+            </div>
+        </section>
     </div>
-<script type="text/javascript">
-    var myFullPage = new fullpage('#wrapper', {
-        sectionsColor: ['white', 'white', 'blue', 'grey', 'green']
-    });
-</script>
+
+    <script>
+        new fullScroll({
+            mainElement: 'main',
+            displayDots: true,
+            dotsPosition: 'left',
+            animateTime: 0.7,
+            animateFunction: 'ease'
+        });
+    </script>
+
 </body>
 </html>
