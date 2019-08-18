@@ -4,46 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Tom Goring - Intern Software Engineer</title>
+    <link href="reset.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="scripts.js">
-    <link rel="stylesheet" href="full-page-scroll.css">
-    <script src="full-page-scroll.js"></script>
+    <script src="https://kit.fontawesome.com/58de03d4c3.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="../JS/viewScroller.min.css">-->
 </head>
 <body>
-    <div id="dots-container"></div>
-    <div id="main" class="scroll-container">
-        <section class="section" id="title-screen">
-            <div class="page">
-                <div id="title-container">
-                    <div>
-                        <h1 id="name">Tom Goring</h1>
-                    </div>
-                    <div>
-                        <div><hr class="centered line"></div>
-                    </div>
-                    <div>
-                        <h4 id="current-position">Intern Software Engineer</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+<div class="mainbag">
+    <div vs-anchor="firstview" class="mainview" id="firstview">
+        <div class="container centered" id="title-box">
+            <h1>Tom Goring</h1>
+            <hr/>
+            <h4 id="current-position">Intern Software Engineer</h4>
+        </div>
+    </div>
+    <div vs-anchor="secondview" class="mainview">
         <section class="section" id="about-me">
-            <div class="page">
+            <div class="container">
                 <div class="row">
-                    <h2 class="section-title centered">About me</h2>
-                    <div class="centered line"></div>
+                    <div class="col-full">
+                        <h2>About Me</h2>
+                        <hr/>
+                    </div>
                 </div>
                 <div class="row section-content">
-                    <div class="half-col">
+                    <div class="col-1-2">
                         <h4>Who am I?</h4>
-                        <p>Hello there. I'm Tom Goring, currently an Intern Software Engineer for Citrix Systems in
-                            Cambridge, UK on my placement year. I finished my second year of Computer Science in May of
+                        <p>I'm Tom Goring, currently an Intern Software Engineer for Citrix Systems UK
+                            on my placement year. I finished my second year of Computer Science in May of
                             2019, and will be returning for my final year in September of 2021.</p>
-                        <p>Blah v2?</p>
-                        <p>Some img links to accounts?</p>
+                        <p>If you have an interest, you can see some of my public projects in my
+                            portfolio below:</p>
+                        <ul class="social-links">
+                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i class="fab fa-linkedin-in"></i></li>
+                            <li><i class="fab fa-github"></i></li>
+                        </ul>
                     </div>
-                    <div class="half-col">
+                    <div class="col-1-2">
                         <h4>My Personal Interests</h4>
                         <p>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah </p>
                         <ul>
@@ -56,31 +57,35 @@
                 </div>
             </div>
         </section>
-        <section class="section">
-            <div>
-                <span>Section 3</span>
-            </div>
-        </section>
-        <section class="section">
-            <div>
-                <span>Section 4</span>
-            </div>
-        </section>
-        <section class="section">
-            <div>
-                <span>Section 5</span>
-            </div>
-        </section>
     </div>
+    <div vs-anchor="thirdview" class="mainview">
+        View 3
+    </div>
+    <div vs-anchor="fourthview" class="mainview">
+        View 4
+    </div>
+    <div vs-anchor="fifthview" class="mainview">
+        View 5
+    </div>
+</div>
+<script src="scripts.js"></script>
+<!--
+<script src="../JS/jquery-3.1.0.min.js"></script>
+<script src="../JS/jquery.easing.min.js"></script>
+<script src="../JS/jquery.mousewheel.min.js"></script>
+<script src="../JS/viewScroller.min.js"></script>
 
-    <script>
-        new fullScroll({
-            mainElement: 'main',
-            displayDots: true,
-            dotsPosition: 'left',
-            animateTime: 0.7,
-            animateFunction: 'ease'
+<script>
+    $(document).ready(function() {
+        // Sets viewScroller
+        $('.mainbag').viewScroller({
+            useScrollbar: false,
+            changeWhenAnim: false,
+            animSpeedMainView: 700
         });
-    </script>
+    });
+</script>
+-->
+
 </body>
 </html>
