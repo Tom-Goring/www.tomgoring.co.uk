@@ -1,0 +1,68 @@
+
+
+.section {
+    min-height: 100vh;
+}
+
+#intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.60)), url("../img/cpu.jpg") no-repeat center;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.intro-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro .title {
+    font-size: 73px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    letter-spacing: -0.115rem;
+    line-height: 1.2;
+}
+
+#intro h3 {
+    color: cornflowerblue;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    letter-spacing: 0.076rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.intro-position {
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: white;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .2);
+    margin-bottom: 2rem;
+}
+
+.intro-position span::before {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 14px 0 8px;
+    color: rgba(255, 255, 255, .3);
+}
+
+.intro-position span::after {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 14px 0 8px;
+    color: rgba(255, 255, 255, .3);
+}
