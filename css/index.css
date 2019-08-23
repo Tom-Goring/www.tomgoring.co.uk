@@ -1,6 +1,13 @@
 .section {
     min-height: 100vh;
+    padding: 3rem 1.5rem;
 }
+
+body {
+    font-family: 'Lato', sans-serif !important;
+}
+
+/********************************************************************************************/
 
 #intro {
     background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.60)), url("../img/cpu.jpg")
@@ -115,4 +122,45 @@
 .social-connections a:hover {
     color: cornflowerblue;
     transition: all .3s ease-in-out;
+}
+
+/********************************************************************************************/
+
+#about {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+#about .title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#about .header-intro {
+    margin-bottom: 5rem;
+}
+
+#about .header-intro h5 {
+    color: cornflowerblue;
+    font-size: 1.1rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+}
+
+#about .header-intro h6 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+#about ul {
+    list-style: none;
+}
+
+#about ul li {
+    margin-bottom: .6rem;
+}
+
+#about .my-skills ul {
+    margin-left: 3rem;
+    list-style: disc;
 }
