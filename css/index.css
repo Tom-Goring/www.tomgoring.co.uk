@@ -3,7 +3,10 @@
 }
 
 #intro {
-    background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.60)), url("../img/cpu.jpg") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.60)), url("../img/cpu.jpg")
+    no-repeat
+    center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
@@ -16,8 +19,7 @@
 }
 
 .intro-content {
-    position: relative;
-    top: -8vh;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,16 +27,17 @@
 }
 
 #intro .title {
-    font-size: 73px;
+    font-size: 86px;
     text-shadow: 0 0 20px rgba(0, 0, 0, .5);
     letter-spacing: -0.115rem;
-    line-height: 1.2;
+    line-height: 1;
+    font-family: Arial, sans-serif;
 }
 
 #intro h3 {
     color: cornflowerblue;
     font-size: 1.7rem;
-    line-height: 1.1;
+    line-height: 1;
     letter-spacing: 0.076rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -81,8 +84,35 @@
     background: 0 0;
     border-color: cornflowerblue;
     transition: all .3s ease-in-out;
+    margin-top: 1rem;
 }
 
 #learn-more:hover {
     background: cornflowerblue;
+}
+
+#learn-more svg {
+    display: inline-block;
+    font-size: 1.6rem;
+    text-align: center;
+    position: relative;
+    left: 1.2rem;
+    padding-top: 5px;
+}
+
+#intro .intro-content .social-connections {
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.social-connections a {
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.social-connections a:hover {
+    color: cornflowerblue;
+    transition: all .3s ease-in-out;
 }
