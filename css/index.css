@@ -1,5 +1,3 @@
-
-
 .section {
     min-height: 100vh;
 }
@@ -18,7 +16,8 @@
 }
 
 .intro-content {
-    position: absolute;
+    position: relative;
+    top: -8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,10 +58,31 @@
     color: rgba(255, 255, 255, .3);
 }
 
+.intro-content p {
+    line-height: 0.8rem;
+}
+
 .intro-position span::after {
     content: "|";
     text-align: center;
     display: inline-block;
     padding: 0 14px 0 8px;
     color: rgba(255, 255, 255, .3);
+}
+
+#learn-more {
+    cursor: pointer;
+    color: white;
+    line-height: 3.4rem;
+    padding: 0 2.5rem 0 3rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    background: 0 0;
+    border-color: cornflowerblue;
+    transition: all .3s ease-in-out;
+}
+
+#learn-more:hover {
+    background: cornflowerblue;
 }
