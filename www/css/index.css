@@ -3,15 +3,48 @@ section {
     width: 100vw;
 }
 
-#title-page {
-    background: linear-gradient(90deg, #FFFFFF 40%, #ca3639 0%);
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
-#first-name {
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
+
+.white {
+    background-color: white;
+    color: white;
+}
+
+.red {
+    background-color: #ca3639;
     color: #ca3639;
-    font-size: 80px;
 }
 
-#second-name {
+.fill-40 {
+    width: 40vw;
+    height: 100vh;
+}
+
+.fill-60 {
+    width: 60vw;
+    height: 100vh;
+}
+
+#title-page h1 {
+    font-size: 18rem;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.first-name {
+    color: #ca3639;
+}
+
+.last-name {
     color: white;
 }
