@@ -38,6 +38,7 @@ body {
 
 #title-box {
     position: absolute;
+    transition: height 0.66s ease-out;
 }
 
 #title-box h1 {
@@ -47,6 +48,5 @@ body {
     justify-content: center;
     text-transform: uppercase;
     padding: 10px 0 10px 0;
-    display: none;
 }
 
