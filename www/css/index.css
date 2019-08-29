@@ -1,6 +1,7 @@
 section {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    position: relative;
 }
 
 body {
@@ -8,43 +9,44 @@ body {
     overflow-x: hidden;
 }
 
-.vertical-center {
-    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
-    display: flex;
-    align-items: center;
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/page-loader.gif') 50% 50% no-repeat rgb(0,0,0);
 }
 
-.white {
-    background-color: white;
-    color: white;
-}
-
-.red {
-    background-color: #ca3639;
-    color: #ca3639;
-}
-
-.fill-40 {
-    width: 40vw;
-    height: 100vh;
-}
-
-.fill-60 {
-    width: 60vw;
-    height: 100vh;
-}
-
-#title-page h1 {
-    font-size: 18rem;
+.centered {
     position: absolute;
-    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.first-name {
-    color: #ca3639;
+.transparent {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.last-name {
+#header {
+    background: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.60)), url("../images/cpu.jpg")
+    no-repeat
+    center;
+}
+
+#title-box {
+    position: absolute;
+}
+
+#title-box h1 {
+    font-family: 'Lato', sans-serif;
     color: white;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+    display: none;
 }
+
