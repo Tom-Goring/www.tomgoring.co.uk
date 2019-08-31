@@ -1,4 +1,4 @@
-var canvas = document.getElementById('nokey'),
+var canvas = document.getElementById('canvas'),
     can_w = parseInt(canvas.getAttribute('width')),
     can_h = parseInt(canvas.getAttribute('height')),
     ctx = canvas.getContext('2d');
@@ -15,9 +15,9 @@ var ball = {
         phase: 0
     },
     ball_color = {
-        r: 207,
-        g: 255,
-        b: 4
+        r: 102,
+        g: 178,
+        b: 255
     },
     R = 2,
     balls = [],
