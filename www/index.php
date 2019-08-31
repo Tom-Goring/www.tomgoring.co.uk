@@ -6,26 +6,23 @@
 </head>
 <body class="flex">
 
-<canvas id="canvas" width="800" height="800"></canvas>
-
-<div class="flex on-top" id="hero-page">
-
-    <div class="text">
-        Hello, I'm
+<section class="flex " id="hero-page">
+    <canvas id="canvas" width="800" height="800"></canvas>
+    <div class="text on-top">
+        <span>Hello, I'm</span>
         <span class="highlight">Tom Goring</span>.
         <br>
         <span class="sub-text">Software Engineer Intern</span>
     </div>
-    <button>
-        <span>Find out more</span><i class="fas fa-arrow-right"></i>
-    </button>
+    <button class="on-top"><span>Find out more</span><i class="fas fa-arrow-right"></i></button>
+</section>
 
-</div>
+<section class="flex" id="about-me">
 
+</section>
 
 <script src="js/canvas.js"></script>
 <?php include ('html/footer.html'); ?>
-
 
 </body>
 </html>
