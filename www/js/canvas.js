@@ -45,19 +45,14 @@ function getRandomSpeed(pos){
     switch(pos){
         case 'top':
             return [randomNumFrom(min, max), randomNumFrom(0.1, max)];
-            break;
         case 'right':
             return [randomNumFrom(min, -0.1), randomNumFrom(min, max)];
-            break;
         case 'bottom':
             return [randomNumFrom(min, max), randomNumFrom(min, -0.1)];
-            break;
         case 'left':
             return [randomNumFrom(0.1, max), randomNumFrom(min, max)];
-            break;
         default:
             return;
-            break;
     }
 }
 function randomArrayItem(arr){
@@ -91,8 +86,7 @@ function getRandomBall(){
                 r: R,
                 alpha: 1,
                 phase: randomNumFrom(0, 10)
-            }
-            break;
+            };
         case 'bottom':
             return {
                 x: randomSidePos(can_w),
@@ -102,8 +96,7 @@ function getRandomBall(){
                 r: R,
                 alpha: 1,
                 phase: randomNumFrom(0, 10)
-            }
-            break;
+            };
         case 'left':
             return {
                 x: -R,
@@ -113,8 +106,7 @@ function getRandomBall(){
                 r: R,
                 alpha: 1,
                 phase: randomNumFrom(0, 10)
-            }
-            break;
+            };
     }
 }
 function randomSidePos(length){
@@ -270,18 +262,3 @@ canvas.addEventListener('mousemove', function(e){
     mouse_ball.y = e.pageY;
     // console.log(mouse_ball);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
