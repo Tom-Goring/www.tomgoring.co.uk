@@ -70,4 +70,9 @@ html, body{
 
 #hero-page button svg {
     margin-left: 0.9em;
+    transition: transform .3s;
+}
+
+#hero-page button:hover svg {
+    transform: rotate(90deg);
 }
