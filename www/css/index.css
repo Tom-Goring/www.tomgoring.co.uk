@@ -3,12 +3,71 @@ html, body{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.on-top {
+    z-index: 999;
+}
+
+.highlight {
+    color: rgb(102, 178, 255) !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.sub-text {
+    font-size: 0.9em;
+}
+
+.sub-text::before {
+    content: '|';
+    margin-right: 0.4em;
+    color: rgba(255,255,255,.3);
+}
+
+.sub-text::after {
+    content: '|';
+    margin-left: 0.4em;
+    color: rgba(255,255,255,.3);
 }
 
 #canvas {
+    position: absolute;
     height: 100vh;
     width: 100vw;
     background-color: black;
 }
 
+#hero-page .text {
+    font-size: 3.5em;
+    color: white;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+#hero-page button {
+    cursor: pointer;
+    color: white;
+    background: 0 0;
+    padding: .5em 1.3em .5em 1em;
+    font-size: 1.7em;
+    transition: all .5s;
+    border: 2px solid white
+}
+
+#hero-page button:hover {
+    background-color: rgb(102, 178, 255);
+    border-color: rgb(102, 178, 255);
+}
+
+#hero-page button svg {
+    margin-left: 0.9em;
+}
