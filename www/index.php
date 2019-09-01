@@ -4,20 +4,24 @@
     <title>Tom Goring | Intern Software Engineer</title>
     <?php include ('html/header.html'); ?>
 </head>
-<body class="flex">
+<body>
 
-<section class="flex " id="hero-page">
-    <canvas id="canvas" width="800" height="800"></canvas>
-    <div class="text on-top">
+<section class="flex" id="hero-page">
+
+    <div class="canvas">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="text">
         <span>Hello, I'm</span>
         <span class="highlight">Tom Goring</span>.
         <br>
         <span class="sub-text">Software Engineer Intern</span>
     </div>
-    <button class="on-top"><span>Find out more</span><i class="fas fa-arrow-right"></i></button>
+    <button><span>Find out more</span><i class="fas fa-arrow-right"></i></button>
 </section>
 
-<section class="flex" id="about-me">
+<section>
 
 </section>
 
