@@ -1,6 +1,16 @@
+:root {
+    --dark-background: #252934;
+    --darker-background: #1B242F;
+    --light-background: #ffffff;
+    --highlight-color: #db1c52;
+    --element-color: #66b2ff;
+    --transparent-gray: rgba(255,255,255,.3);
+}
+
 * {
     box-sizing: border-box;
     transition: all .5s;
+    font-family: 'Lato', sans-serif;
 }
 
 html, body {
@@ -17,6 +27,16 @@ section {
     height: 100vh;
 }
 
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4em;
+    width: 100%;
+    background: var(--darker-background);
+    border-bottom: 3px solid var(--element-color);
+}
+
 /*********************************************************************************************************************/
 
 .flex {
@@ -27,9 +47,17 @@ section {
 }
 
 .highlight {
-    color: rgb(102, 178, 255) !important;
+    color: var(--highlight-color) !important;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
+}
+
+.active {
+    color: var(--highlight-color) !important;
+}
+
+.fixed {
+    position: fixed;
 }
 
 .sub-text {
@@ -39,20 +67,20 @@ section {
 .sub-text::before {
     content: '|';
     margin-right: 0.4em;
-    color: rgba(255,255,255,.3);
+    color: var(--transparent-gray);
 }
 
 .sub-text::after {
     content: '|';
     margin-left: 0.4em;
-    color: rgba(255,255,255,.3);
+    color: var(--transparent-gray);
 }
 
 /*********************************************************************************************************************/
 
 .canvas {
     position: absolute;
-    background: #252934;
+    background: var(--dark-background);
     top: 0;
     left: 0;
     width: 100%;
@@ -74,12 +102,13 @@ section {
     padding: .5em 1.3em .5em 1em;
     font-size: 1.7em;
     transition: all .5s;
-    border: 2px solid white
+    border: 2px solid white;
+    z-index: 1;
 }
 
 #hero-page button:hover {
-    background-color: rgb(102, 178, 255);
-    border-color: rgb(102, 178, 255);
+    background-color: var(--element-color);
+    border-color: var(--element-color);
 }
 
 #hero-page button svg {
@@ -93,7 +122,17 @@ section {
 
 /*********************************************************************************************************************/
 
-#hero-page {
-    height: 100vh;
-    width: 100vw;
+.page-links {
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.page-link {
+    font-size: 1.2em;
+    margin: 0 1em 0 1em;
+    display: inline;
+    color: var(--light-background);
+    text-align: left;
+    text-transform: uppercase;
 }
