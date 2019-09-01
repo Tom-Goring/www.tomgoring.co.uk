@@ -29,12 +29,17 @@ section {
 
 nav {
     position: absolute;
-    top: 0;
+    bottom: -4em;
     left: 0;
     height: 4em;
     width: 100%;
     background: var(--darker-background);
     border-bottom: 3px solid var(--element-color);
+}
+
+nav.fixed {
+    top: 0;
+    left: 0;
 }
 
 /*********************************************************************************************************************/
@@ -122,17 +127,23 @@ nav {
 
 /*********************************************************************************************************************/
 
-.page-links {
+.nav-els {
     text-align: left;
     width: 100%;
     max-width: 1200px;
 }
 
-.page-link {
+.nav-el {
     font-size: 1.2em;
     margin: 0 1em 0 1em;
     display: inline;
     color: var(--light-background);
     text-align: left;
     text-transform: uppercase;
+}
+
+/*********************************************************************************************************************/
+
+#about {
+
 }
