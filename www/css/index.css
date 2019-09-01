@@ -52,6 +52,13 @@ nav.fixed {
     align-items: center;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .highlight {
     color: var(--highlight-color) !important;
     font-family: 'Lato', sans-serif;
@@ -91,6 +98,10 @@ nav.fixed {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#hero-page {
+    margin-bottom: 4em;
 }
 
 #hero-page .text {
@@ -146,5 +157,45 @@ nav.fixed {
 /*********************************************************************************************************************/
 
 #about {
-    margin-top: 4em;
+
+}
+
+#about .col-sm {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+#about p {
+    font-size: 1.1em;
+}
+
+#about-title {
+    margin-bottom: 2em;
+}
+
+.about-list li {
+    margin-bottom: 0.6em;
+    font-size: 1.2em;
+}
+
+.about-list li strong {
+    font-size: 1.2em;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
+    transition: 0.3s;
+    margin-bottom: 2em;
+}
+
+.card li {
+    font-size: 1.1em;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+}
+
+.card-contents {
+    padding: 2px 16px;
 }
