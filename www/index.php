@@ -7,11 +7,9 @@
 <body>
 
 <section class="flex" id="hero-page">
-
     <div class="canvas">
         <canvas id="canvas"></canvas>
     </div>
-
     <div class="text">
         <span>Hello, I'm</span>
         <span class="highlight">Tom Goring</span>.
@@ -28,10 +26,7 @@
             <div class="nav-el" dest="contact">contact</div>
         </div>
     </nav>
-
 </section>
-
-
 
 <section>
     <div class="container" id="about">
