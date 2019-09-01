@@ -19,19 +19,37 @@
         <span class="sub-text">Software Engineer Intern</span>
     </div>
     <button><span>Find out more</span><i class="fas fa-arrow-right"></i></button>
+    <nav class="flex">
+        <div class="nav-els">
+            <div class="nav-el active" dest="home">home</div>
+            <div class="nav-el" dest="about">about</div>
+            <div class="nav-el" dest="timeline">timeline</div>
+            <div class="nav-el" dest="projects">projects</div>
+            <div class="nav-el" dest="contact">contact</div>
+        </div>
+    </nav>
 
 </section>
 
+
+
 <section>
-    <nav class="flex">
-        <div class="page-links">
-            <div class="page-link active" dest="home">home</div>
-            <div class="page-link" dest="about">about</div>
-            <div class="page-link" dest="timeline">timeline</div>
-            <div class="page-link" dest="projects">projects</div>
-            <div class="page-link" dest="contact">contact</div>
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-sm">
+                <h1>Title</h1>
+            </div>
         </div>
-    </nav>
+        <div class="row">
+            <div class="col-sm">
+                <h2>Content</h2>
+            </div>
+            <div class="col-sm">
+                <h2>Content</h2>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <section>
