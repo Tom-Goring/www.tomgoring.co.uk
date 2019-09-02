@@ -14,8 +14,15 @@
 </form>
 
 <?php
+    require_once('character.php');
     if (isset($_POST)) {
+        $char = new character();
 
+        $char->name = $_POST['name'];
+        $char->class = $_POST['class'];
+        $char->level = $_POST['level'];
+
+        $char->saveToXML();
     }
 ?>
 
