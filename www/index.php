@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <title>Tom Goring | Intern Software Engineer</title>
-    <?php include ('html/header.html'); ?>
+    <?php include('index/header.html'); ?>
+    <link rel="stylesheet" href="index/index.css">
 </head>
 <body>
 
@@ -19,11 +20,11 @@
     <button><span>Find out more</span><i class="fas fa-arrow-right"></i></button>
     <nav class="flex">
         <div class="nav-els">
-            <div class="nav-el active" dest="home">home</div>
-            <div class="nav-el" dest="about">about</div>
-            <div class="nav-el" dest="timeline">timeline</div>
-            <div class="nav-el" dest="projects">projects</div>
-            <div class="nav-el" dest="contact">contact</div>
+            <div class="nav-el active">home</div>
+            <div class="nav-el">about</div>
+            <div class="nav-el">timeline</div>
+            <div class="nav-el">projects</div>
+            <div class="nav-el">contact</div>
         </div>
     </nav>
 </section>
@@ -127,9 +128,9 @@
 </section>
 
 
-<script src="js/canvas.js"></script>
-<script src="js/scripts.js"></script>
-<?php include ('html/footer.html'); ?>
+<script src="index/canvas.js"></script>
+<script src="index/scripts.js"></script>
+<?php include('index/footer.html'); ?>
 
 </body>
 </html>
