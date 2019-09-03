@@ -1,46 +1,10 @@
 version: '3'
 services:
   httpd-php:
-    image: php:7.3-apache
+    image: httpd
     ports:
       - "8080:80"
     volumes:
       - E:\Files\User Area\Documents\PhpstormProjects\www.tomgoring.co.uk\www:/var/www
       - E:\Files\User Area\Documents\PhpstormProjects\www.tomgoring.co.uk\config\apache2:/etc/apache2
 
-  postgres:
-    image: postgres
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    networks:
-      - pgnetwork
-    environment:
-      - PG_MODE=primary
-      - PG_PRIMARY_USER=postgres
-      - PG_PRIMARY_PASSWORD=password
-      - PG_DATABASE=dnd
-      - PG_ROOT_PASSWORD=password
-      - PG_PRIMARY_PORT=5432
-
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    ports:
-      - "5050:80"
-    volumes:
-      - pgadmin:/pgdata
-    networks:
-      - pgnetwork
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=tgoring97@gmail.com
-      - PGADMIN_DEFAULT_PASSWORD=password
-
-
-volumes:
-  pgdata:
-
-  pgadmin:
-
-networks:
-  pgnetwork:
