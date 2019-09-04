@@ -61,7 +61,7 @@ nav.fixed {
     transform: translate(-50%, -50%);
 }
 
-.highlight {
+.emphasize {
     color: var(--highlight-color) !important;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -159,13 +159,20 @@ nav.fixed {
 /*********************************************************************************************************************/
 
 #about {
-    max-width: 100vw;
+    padding: 2em 2em 0 2em;
+    max-width: 1400px;
     max-height: 100vh;
 }
 
 #about h2 {
     text-transform: uppercase;
+    font-size: 1.4em;
+}
 
+#about h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 0.3em;
 }
 
 #about .column {
@@ -174,7 +181,7 @@ nav.fixed {
 }
 
 #about p {
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
 
 #about-title {
@@ -183,14 +190,20 @@ nav.fixed {
 
 .about-list li {
     margin-bottom: 0.6em;
-    font-size: 1.2em;
+    font-size: 1.05em;
 }
 
 .about-list li strong {
-    font-size: 1.2em;
+    font-size: 1.05em;
+}
+
+.cards {
+    flex-direction: row;
 }
 
 .card {
+    width: 20vw;
+    height: 64vh;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
     transition: 0.3s;
     margin-bottom: 2em;
@@ -209,6 +222,8 @@ nav.fixed {
 }
 
 /*********************************************************************************************************************/
+
+/* TODO: Finish this */
 
 #timeline {
     background-color: var(--offwhite-background);
