@@ -22,11 +22,14 @@ html, body {
     overflow-x: hidden;
 }
 
+html {
+    overflow-y: hidden;
+}
+
 section {
     position: relative;
-    min-width: 100vw;
-    min-height: 100vh;
     display: block;
+    min-width: 100vw;
 }
 
 nav {
@@ -45,6 +48,10 @@ nav.fixed {
     left: 0;
 }
 
+ul li ul {
+    margin-bottom: 1.5em;
+}
+
 /*********************************************************************************************************************/
 
 .flex {
@@ -52,13 +59,6 @@ nav.fixed {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .emphasize {
@@ -91,7 +91,27 @@ nav.fixed {
     color: var(--transparent-gray);
 }
 
+.is-curved {
+    border-radius: 12px;
+}
+
+.has-2em-bottom-margin {
+    margin-bottom: 2em;
+}
+
+.has-2em-top-margin {
+    margin-top: 2em;
+}
+
+.has-disc-bullets {
+    list-style: disc;
+}
+
 /*********************************************************************************************************************/
+
+#hero-page {
+    min-height: 100vh;
+}
 
 .canvas {
     position: absolute;
@@ -159,9 +179,11 @@ nav.fixed {
 /*********************************************************************************************************************/
 
 #about {
-    padding: 2em 2em 0 2em;
+    padding: 6em 1.5em 12em 1.5em;
     max-width: 1400px;
-    max-height: 100vh;
+    background-color: var(--dark-background);
+    color: white;
+    transition: none;
 }
 
 #about h2 {
@@ -175,51 +197,52 @@ nav.fixed {
     margin-bottom: 0.3em;
 }
 
-#about .column {
-    margin-left: 3em;
-    margin-right: 3em;
-}
-
 #about p {
     font-size: 1.05em;
 }
 
-#about-title {
-    margin-bottom: 2em;
+/*********************************************************************************************************************/
+
+#skills .container {
+    z-index: 2;
+    margin-top: -8em;
 }
 
-.about-list li {
-    margin-bottom: 0.6em;
-    font-size: 1.05em;
+/* TODO: fix the skill cards sizing based on media size */
+
+@media only screen and (max-width: 600px) {
+    #skills .container {
+        max-width: 80vh;
+    }
+    #skills .column:first-child {
+        border-right: 1px solid #E6ECF8;
+    }
+
+    #skills .column:last-child {
+        border-left: 1px solid #E6ECF8;
+    }
 }
 
-.about-list li strong {
-    font-size: 1.05em;
+@media not screen and (min-width: 700px) {
+
 }
 
-.cards {
-    flex-direction: row;
+
+
+#skills .box {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 0;
 }
 
-.card {
-    width: 20vw;
-    height: 64vh;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2);
-    transition: 0.3s;
-    margin-bottom: 2em;
+#skills .columns {
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.card li {
-    font-size: 1.1em;
-}
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-}
-
-.card-contents {
-    padding: 2px 16px;
-}
 
 /*********************************************************************************************************************/
 
