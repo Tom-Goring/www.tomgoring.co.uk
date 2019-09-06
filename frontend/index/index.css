@@ -68,30 +68,6 @@ ul li ul {
     border-radius: 12px;
 }
 
-.is-indented {
-    margin-left: 2rem;
-}
-
-.is-left-aligned {
-
-}
-
-.is-right-aligned {
-
-}
-
-.has-2rem-bottom-margin {
-    margin-bottom: 2rem;
-}
-
-.has-2rem-top-margin {
-    margin-top: 2rem;
-}
-
-.has-disc-bullets {
-    list-style: disc;
-}
-
 /*********************************************************************************************************************/
 
 #hero-page {
