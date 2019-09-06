@@ -95,6 +95,18 @@ ul li ul {
     border-radius: 12px;
 }
 
+.is-indented {
+    margin-left: 2em;
+}
+
+.is-left-aligned {
+
+}
+
+.is-right-aligned {
+
+}
+
 .has-2em-bottom-margin {
     margin-bottom: 2em;
 }
@@ -208,12 +220,37 @@ ul li ul {
     margin-top: -8em;
 }
 
-/* TODO: fix the skill cards sizing based on media size */
+#skills .column {
+    margin-left: 1em;
+    margin-right: 1em;
+}
 
-@media only screen and (max-width: 600px) {
-    #skills .container {
-        max-width: 80vh;
+#skills .container {
+    max-width: 80vw;
+}
+
+#skills strong {
+    font-size: 1.1em;
+}
+
+#skills p {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 5em;
+    max-width: 20em;
+}
+
+@media only screen and (max-width: 780px) {
+    #skills .column:first-child {
+        border-bottom: 1px solid #E6ECF8;
     }
+
+    #skills .column:last-child {
+        border-bottom: 1px solid #E6ECF8;
+    }
+}
+
+@media only screen and (min-width: 770px) {
     #skills .column:first-child {
         border-right: 1px solid #E6ECF8;
     }
@@ -223,11 +260,13 @@ ul li ul {
     }
 }
 
-@media not screen and (min-width: 700px) {
-
+#skills ul {
+    list-style: none;
 }
 
-
+#skills strong {
+    margin-bottom: 0.75em;
+}
 
 #skills .box {
     background-color: white;
@@ -235,36 +274,13 @@ ul li ul {
     height: 100%;
     border-radius: 12px;
     padding: 0;
+    margin-bottom: 4em;
 }
-
-#skills .columns {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-
 
 /*********************************************************************************************************************/
 
 /* TODO: Finish this */
 
-#timeline {
-    background-color: var(--offwhite-background);
-}
-
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: var(--transparent-gray);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+#timeline strong {
+    margin-bottom: 1em;
 }

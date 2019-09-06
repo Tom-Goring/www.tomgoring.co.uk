@@ -5,8 +5,9 @@
 
     <script src="https://kit.fontawesome.com/58de03d4c3.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Oswald&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <link rel="stylesheet" href="index/bulma-timeline.min.css">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,17 +71,16 @@
 <section id="skills" class="has-text-centered">
     <div class="container is-narrow is-centered">
         <div class="box">
-            <div class="content">
-                <div class="columns">
+                <div class="columns"> <!-- TODO: Find some cool images to put at the top of these columns -->
                     <div class="column">
-                        <h1 id="test" class="title is-size-4 is-spaced has-2em-top-margin">Skills I'm Learning</h1>
-                        <p class="has-2em-bottom-margin">Skills I'm currently putting time into outside of work.</p>
-                        <ul class="has-20-lr-margin">
+                        <h1 class="title is-size-4 is-spaced has-2em-top-margin">Skills I'm Learning</h1>
+                        <p>Skills I'm currently putting time into outside of work.</p>
+                        <ul>
                             <li>
                                 <strong>Front-end development:</strong>
                                 <ul>
                                     <li>HTML, CSS, JS</li>
-                                    <li>Plans to learn JS based frontend like React, Angular, & Vue></li>
+                                    <li>Plans to learn JS based frontend like React, Angular, & Vue</li>
                                 </ul>
                             </li>
 
@@ -88,7 +88,8 @@
                                 <strong>Back-end development:</strong>
                                 <ul>
                                     <li>PHP, NodeJS, Flask, etc</li>
-                                    <li>Get more database practise</li>
+                                    <li>Standard database design</li>
+                                    <li>NoSQL & other database structures</li>
                                 </ul>
                             </li>
                             <li><strong>Automation & Build systems</strong></li>
@@ -98,31 +99,101 @@
                     </div>
                     <div class="column">
                         <h1 class="title is-size-4 is-spaced has-2em-top-margin">Skills I'm Using</h1>
-                        <p class="has-2em-bottom-margin">Skills I'm currently using at work.</p>
-                        <ul class="has-20-lr-margins">
-                            <li>Low level C programming</li>
-                            <li>Agile development practises</li>
-                            <li>Large scale Git interactions</li>
+                        <p>Skills I'm currently using at work.</p>
+                        <ul>
+                            <li>
+                                <ul class="flex">
+                                    <li> <strong>Low level C programming</strong></li>
+                                    <li>Currently working on Linux Kernel, QEMU & Installer Scripts</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><strong>Agile development practises</strong></li>
+                                    <li>Currently on a Kanban team</li>
+                                    <li>In the future will be on a Scrum team</li>
+                                    <li>Also familiar with other Agile methodologies from my degree</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><Strong>Git</Strong></li>
+                                    <li>Interacting with multiple large projects at a time</li>
+                                    <li>Familiar with most aspects of Git - push/pulling, rebasing,
+                                    merging, pull requests, reviewing</li>
+                                    <li>GitHub, GitLab, BitBucket</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <div class="column">
                         <h1 class="title is-size-4 is-spaced has-2em-top-margin">Other skills I have</h1>
-                        <p class="has-2em-bottom-margin">Skills I've learned in the past that I'm not currently working with.</p>
-                        <ul class="has-20-lr-margin">
-                            <li>Algorithm Design & Analysis</li>
-                            <li>Object Oriented Design & Programming</li>
-                            <li>Database Structure, SQL, & SQL database connectivity</li>
-                            <li>Embedded Programming in C++ and MicroPython</li>
+                        <p>Skills I've learned in the past that I'm not currently working with.</p>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li><strong>University Modules</strong></li>
+                                    <li>Design & Analysis of Algorithms</li>
+                                    <li>Machine Learning & AI</li>
+                                    <li>Object Oriented</li>
+                                    <li>Operating Systems</li>
+                                    <li>IoT & Embedded</li>
+                                </ul>
+                            </li>
+                            <li><strong>From curiosity</strong></li>
+                            <li>Database Structure, SQL, & SQL database connectivity (JDBC)</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
 
-<section id="timeline"> <!-- TODO: Add and populate timeline section -->
-
+<section id="timeline">
+    <div class="container">
+        <div class="content has-text-centered" id="experience-header">
+            <h5>Experience</h5>
+            <h6>My history in the industry.</h6>
+        </div>
+        <div class="timeline is-centered">
+            <div class="timeline-item">
+                <div class="timeline-marker is-primary"></div>
+                <div class="timeline-content">
+                    <p class="heading">July 2019 - Present</p>
+                    <p>Intern Software Engineer at Citrix Systems UK</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker is-danger"></div>
+                <div class="timeline-content">
+                    <p class="heading">September 2018 - May 2019</p>
+                    <p>Second Year Computer Science Student</p>
+                    <p><strong>Modules</strong></p> <!-- TODO: Add JS to make this clickable -> show modules -->
+                    <ul>
+                        <li><p>Design & Analysis of Algorithms and Data Structures</p></li>
+                        <li><p>Intelligent Systems</p></li>
+                        <li><p>Object-Oriented Systems Development</p></li>
+                        <li><p>Internet of Things</p></li>
+                        <li><p>Operating Systems</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker is-danger"></div>
+                <div class="timeline-content">
+                    <p class="heading">September 2017 - May 2018</p>
+                    <p>First Year Computer Science Student</p>
+                    <p><strong>Modules</strong></p> <!-- TODO: Add JS to make this clickable -> show modules -->
+                    <ul>
+                        <li><p>Computer and Network Systems</p></li>
+                        <li><p>Principles of Computing</p></li>
+                        <li><p>Introduction to AI</p></li>
+                        <li><p>Introduction to Object Oriented Systems Development</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="projects"> <!-- TODO: Add and populate projects section -->
