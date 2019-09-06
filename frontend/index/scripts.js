@@ -25,5 +25,11 @@ $(function() {
             }
         });
     }
+
+    $(".slideButton").click(function() {
+        let parent = $(this).closest('.slideContent');
+        let moduleList = parent.find('.module-list');
+        moduleList.slideToggle();
+    });
 });
 

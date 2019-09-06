@@ -271,3 +271,21 @@ nav.fixed {
 #timeline strong {
     margin-bottom: 1rem;
 }
+
+#projects {
+    min-height: 100vh;
+}
+
+.slideButton {
+    cursor: pointer;
+    border: 1px black;
+}
+
+.module-list {
+    border: 1px solid transparent;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    transition: none;
+}
