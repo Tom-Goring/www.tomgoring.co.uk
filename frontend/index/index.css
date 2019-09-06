@@ -3,7 +3,7 @@
     --darker-background: #1B242F;
     --light-background: #ffffff;
     --highlight-color: #db1c52;
-    --elrement-color: #66b2ff;
+    --element-color: #66b2ff;
     --transparent-gray: rgba(255,255,255,.3);
     --offwhite-background: #dbdbdb;
 }
@@ -36,6 +36,22 @@ ul li ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.is-secondary {
+    color: var(--highlight-color);
+}
+
+.is-secondary-on-hover:hover {
+    color: var(--highlight-color);
+}
+
+.is-tertiary {
+    color: var(--element-color)
+}
+
+.is-tertiary-on-hover:hover {
+    color: var(--element-color)
 }
 
 .emphasize {
@@ -91,7 +107,7 @@ ul li ul {
     font-size: 3.5rem;
     color: white;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     z-index: 1;
 }
 
@@ -107,8 +123,8 @@ ul li ul {
 }
 
 #hero-page button:hover {
-    background-color: var(--elrement-color);
-    border-color: var(--elrement-color);
+    background-color: var(--element-color);
+    border-color: var(--element-color);
 }
 
 #hero-page button svg {
@@ -129,7 +145,7 @@ nav {
     height: 4rem;
     width: 100%;
     background: var(--darker-background);
-    border-bottom: 3px solid var(--elrement-color);
+    border-bottom: 3px solid var(--element-color);
     z-index: 100;
 }
 
@@ -144,7 +160,7 @@ nav.fixed {
     max-width: 1200px;
 }
 
-.nav-el {
+.nav-els > * {
     font-size: 1.2rem;
     margin: 0 1rem 0 1rem;
     display: inline;
@@ -203,6 +219,12 @@ nav.fixed {
     margin-right: auto;
     min-height: 5rem;
     max-width: 20rem;
+}
+
+#skills .header-icon {
+    margin-top: 2rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 780px) {
