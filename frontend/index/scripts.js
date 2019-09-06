@@ -14,19 +14,16 @@ $(function() {
         nav.addClass('desk');
     }
 
-    let body = $('body');
-
     if (!isMobile) {
-        body.scroll(function() {
+        $(window).on('scroll', function () {
+            let pos = $(window).scrollTop();
 
-            let pos = body.scrollTop();
-
-            if (pos > body.height()) {
+            if (pos > $(window).height()) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
             }
-        })
+        });
     }
 });
 

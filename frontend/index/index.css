@@ -3,7 +3,7 @@
     --darker-background: #1B242F;
     --light-background: #ffffff;
     --highlight-color: #db1c52;
-    --element-color: #66b2ff;
+    --elrement-color: #66b2ff;
     --transparent-gray: rgba(255,255,255,.3);
     --offwhite-background: #dbdbdb;
 }
@@ -14,16 +14,9 @@
     font-family: 'Lato', sans-serif;
 }
 
-html, body {
-    font-family: 'Lato', sans-serif;
+body {
     height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-html {
-    overflow-y: hidden;
+    width: 100%;
 }
 
 section {
@@ -32,24 +25,8 @@ section {
     min-width: 100vw;
 }
 
-nav {
-    position: absolute;
-    bottom: -4em;
-    left: 0;
-    height: 4em;
-    width: 100%;
-    background: var(--darker-background);
-    border-bottom: 3px solid var(--element-color);
-    z-index: 1000;
-}
-
-nav.fixed {
-    top: 0;
-    left: 0;
-}
-
 ul li ul {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
 /*********************************************************************************************************************/
@@ -75,19 +52,15 @@ ul li ul {
     position: fixed;
 }
 
-.sub-text {
-    font-size: 0.9em;
-}
-
 .sub-text::before {
     content: '|';
-    margin-right: 0.4em;
+    margin-right: 0.4rem;
     color: var(--transparent-gray);
 }
 
 .sub-text::after {
     content: '|';
-    margin-left: 0.4em;
+    margin-left: 0.4rem;
     color: var(--transparent-gray);
 }
 
@@ -96,7 +69,7 @@ ul li ul {
 }
 
 .is-indented {
-    margin-left: 2em;
+    margin-left: 2rem;
 }
 
 .is-left-aligned {
@@ -107,12 +80,12 @@ ul li ul {
 
 }
 
-.has-2em-bottom-margin {
-    margin-bottom: 2em;
+.has-2rem-bottom-margin {
+    margin-bottom: 2rem;
 }
 
-.has-2em-top-margin {
-    margin-top: 2em;
+.has-2rem-top-margin {
+    margin-top: 2rem;
 }
 
 .has-disc-bullets {
@@ -135,14 +108,14 @@ ul li ul {
 }
 
 #hero-page {
-    margin-bottom: 4em;
+    margin-bottom: 4rem;
 }
 
 #hero-page .text {
-    font-size: 3.5em;
+    font-size: 3.5rem;
     color: white;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
     z-index: 1;
 }
 
@@ -150,20 +123,20 @@ ul li ul {
     cursor: pointer;
     color: white;
     background: 0 0;
-    padding: .5em 1.3em .5em 1em;
-    font-size: 1.7em;
+    padding: .5rem 1.3rem .5rem 1rem;
+    font-size: 1.7rem;
     transition: all .5s;
     border: 2px solid white;
     z-index: 1;
 }
 
 #hero-page button:hover {
-    background-color: var(--element-color);
-    border-color: var(--element-color);
+    background-color: var(--elrement-color);
+    border-color: var(--elrement-color);
 }
 
 #hero-page button svg {
-    margin-left: 0.9em;
+    margin-left: 0.9rem;
     transition: transform .3s;
 }
 
@@ -173,6 +146,22 @@ ul li ul {
 
 /*********************************************************************************************************************/
 
+nav {
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    background: var(--darker-background);
+    border-bottom: 3px solid var(--elrement-color);
+    z-index: 100;
+}
+
+nav.fixed {
+    top: 0;
+    left: 0;
+}
+
 .nav-els {
     text-align: left;
     width: 100%;
@@ -180,8 +169,8 @@ ul li ul {
 }
 
 .nav-el {
-    font-size: 1.2em;
-    margin: 0 1em 0 1em;
+    font-size: 1.2rem;
+    margin: 0 1rem 0 1rem;
     display: inline;
     color: var(--light-background);
     text-align: left;
@@ -191,7 +180,7 @@ ul li ul {
 /*********************************************************************************************************************/
 
 #about {
-    padding: 6em 1.5em 12em 1.5em;
+    padding: 6rem 1.5rem 12rem 1.5rem;
     max-width: 1400px;
     background-color: var(--dark-background);
     color: white;
@@ -200,29 +189,29 @@ ul li ul {
 
 #about h2 {
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 #about h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 900;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.3rem;
 }
 
 #about p {
-    font-size: 1.05em;
+    font-size: 1.05rem;
 }
 
 /*********************************************************************************************************************/
 
 #skills .container {
     z-index: 2;
-    margin-top: -8em;
+    margin-top: -8rem;
 }
 
 #skills .column {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 #skills .container {
@@ -230,14 +219,14 @@ ul li ul {
 }
 
 #skills strong {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 #skills p {
     margin-left: auto;
     margin-right: auto;
-    min-height: 5em;
-    max-width: 20em;
+    min-height: 5rem;
+    max-width: 20rem;
 }
 
 @media only screen and (max-width: 780px) {
@@ -265,7 +254,7 @@ ul li ul {
 }
 
 #skills strong {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.75rem;
 }
 
 #skills .box {
@@ -274,7 +263,7 @@ ul li ul {
     height: 100%;
     border-radius: 12px;
     padding: 0;
-    margin-bottom: 4em;
+    margin-bottom: 4rem;
 }
 
 /*********************************************************************************************************************/
@@ -282,5 +271,5 @@ ul li ul {
 /* TODO: Finish this */
 
 #timeline strong {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
