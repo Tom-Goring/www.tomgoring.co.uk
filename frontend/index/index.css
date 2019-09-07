@@ -302,21 +302,36 @@ nav.fixed {
     min-height: 100vh;
 }
 
-.slideButton {
-    margin-top: .3rem;
-    margin-bottom: .3rem;
-    cursor: pointer;
-    border: 1px black;
-    font-size: 1rem;
-    width: 100%;
-}
-
 .heading {
     font-size: 1.1rem;
 }
 
+.slideButton {
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%;
+
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.slideButton svg {
+    transition: transform .3s;
+    margin-left: 1rem;
+}
+
+.slideButton:hover svg {
+    transform: rotate(90deg);
+}
+
 .slide-panel {
-    border: 1px solid transparent;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    border-radius: 3px;
+
+    padding: 5px;
+
     -webkit-transition: none;
     -moz-transition: none;
     -o-transition: none;

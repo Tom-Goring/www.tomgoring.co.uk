@@ -14,8 +14,10 @@ $(function() {
 
         let slideButtons = $(".slideButton");
         slideButtons.each(function() {
-            let width = $(this).next(".slide-panel").width();
+            let width = $(this).next(".slide-panel").outerWidth();
+            console.log(width);
             $(this).css("width", width);
+
         });
 
         slideButtons.click(function() {
