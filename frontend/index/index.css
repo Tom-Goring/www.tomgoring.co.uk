@@ -357,7 +357,7 @@ nav.fixed {
 
 #projects {
     margin-top: 4rem;
-    min-height: 80vh;
+    margin-bottom: 4rem;
 }
 
 .project {
@@ -406,4 +406,17 @@ nav.fixed {
 
 .project .overlay p {
     margin-bottom: 1rem;
+}
+
+/*********************************************************************************************************************/
+
+#contact-me {
+    min-height: 20vh;
+    background-color: var(--dark-background)
+}
+
+#contact-me .svg-header {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
