@@ -1,6 +1,25 @@
 $(function() {
 
-    var isMobile;
+    let timeline = $(".timeline");
+    let startingHeight = timeline.height();
+    timeline.css("min-height", startingHeight);
+
+    let timelineContent = $(".timeline-content");
+    timelineContent.each(function() {
+        let height = $(this).height();
+        console.log(height);
+        $(this).css("min-height", height);
+        $(this).css("max-height", height);
+        console.log($(this).css("min-height"));
+    });
+
+    let slideButtons = $(".slideButton");
+    slideButtons.each(function() {
+        let width = $(this).next(".slide-panel").width();
+        $(this).css("width", width);
+    });
+
+    let isMobile;
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         isMobile = true;
     }
@@ -26,10 +45,12 @@ $(function() {
         });
     }
 
-    $(".slideButton").click(function() {
-        let parent = $(this).closest('.slideContent');
-        let moduleList = parent.find('.module-list');
-        moduleList.slideToggle();
+    slideButtons.click(function() {
+        let parent = $(this).parent();
+        parent = parent.parent();
+        console.log(parent);
+        let slide = $(this).next();
+        slide.slideToggle();
     });
 });
 

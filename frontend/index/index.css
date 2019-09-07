@@ -221,9 +221,10 @@ nav.fixed {
     max-width: 20rem;
 }
 
-#skills .header-icon {
+.svg-wrapper {
+    min-width: 4rem;
+    min-height: 4rem;
     margin-top: 2rem;
-    font-size: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -268,6 +269,10 @@ nav.fixed {
 
 /* TODO: Finish this */
 
+#timeline {
+    background-color: whitesmoke;
+}
+
 #timeline strong {
     margin-bottom: 1rem;
 }
@@ -277,11 +282,19 @@ nav.fixed {
 }
 
 .slideButton {
+    margin-top: .3rem;
+    margin-bottom: .3rem;
     cursor: pointer;
     border: 1px black;
+    font-size: 1rem;
+    width: 100%;
 }
 
-.module-list {
+.heading {
+    font-size: 1.1rem;
+}
+
+.slide-panel {
     border: 1px solid transparent;
     -webkit-transition: none;
     -moz-transition: none;

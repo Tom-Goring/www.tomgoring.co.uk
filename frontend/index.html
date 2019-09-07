@@ -74,9 +74,11 @@
 <section id="skills" class="has-text-centered">
     <div class="container is-narrow is-centered">
         <div class="box">
-                <div class="columns"> <!-- TODO: Find some cool images to put at the top of these columns -->
+                <div class="columns"> <!-- TODO: Fix the image pop in here by pre-loading? Or predefining div width -->
                     <div class="column">
-                        <i class="fas fa-book header-icon is-secondary"></i>
+                        <div class="svg-wrapper">
+                            <i class="fas fa-book fa-4x is-secondary"></i>
+                        </div>
                         <h1 class="title is-size-4 is-spaced">Skills I'm Learning</h1>
                         <p>Skills I'm currently putting time into outside of work.</p>
                         <ul>
@@ -102,7 +104,7 @@
                         </ul>
                     </div>
                     <div class="column">
-                        <i class="fas fa-building header-icon is-secondary"></i>
+                        <div class="svg-wrapper"><i class="fas fa-building fa-4x is-secondary"></i></div>
                         <h1 class="title is-size-4 is-spaced">What I do at work</h1>
                         <p>Skills & Frameworks that I'm currently using while employed</p>
                         <ul>
@@ -132,7 +134,7 @@
                         </ul>
                     </div>
                     <div class="column">
-                        <i class="fas fa-question header-icon is-secondary"></i>
+                        <div class="svg-wrapper"><i class="fas fa-question fa-4x is-secondary"></i></div>
                         <h1 class="title is-size-4 is-spaced">Other skills I have</h1>
                         <p>Skills I've learned in the past that I'm not currently working with.</p>
                         <ul>
@@ -178,7 +180,7 @@
                         <button class="slideButton"><strong>Modules</strong></button>
                         <!-- TODO: Change the layout and style around these buttons -->
                         <!-- TODO: Add more content here? -->
-                        <div class="module-list">
+                        <div class="slide-panel">
                             <ul>
                                 <li><p>Design & Analysis of Algorithms and Data Structures</p></li>
                                 <li><p>Intelligent Systems</p></li>
@@ -195,11 +197,8 @@
                 <div class="timeline-content">
                     <p class="heading">September 2017 - May 2018</p>
                     <p>First Year Computer Science Student</p>
-                    <div class="slideContent">
                         <button class="slideButton"><strong>Modules</strong></button>
-                        <!-- TODO: Change the layout and style around these buttons -->
-                        <!-- TODO: Add more content here? -->
-                        <div class="module-list">
+                        <div class="slide-panel">
                             <ul>
                                 <li><p>Computer and Network Systems</p></li>
                                 <li><p>Principles of Computing</p></li>
@@ -207,7 +206,6 @@
                                 <li><p>Introduction to Object Oriented Systems Development</p></li>
                             </ul>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
