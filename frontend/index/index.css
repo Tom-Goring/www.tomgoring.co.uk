@@ -299,8 +299,6 @@ nav.fixed {
 
 /*********************************************************************************************************************/
 
-/* TODO: Finish this */
-
 #timeline {
     background-color: whitesmoke;
     padding-top: 4rem;
@@ -411,7 +409,8 @@ nav.fixed {
 /*********************************************************************************************************************/
 
 #contact-me {
-    min-height: 20vh;
+    padding: 10rem 0 16rem 0;
+    height: auto;
     background-color: var(--dark-background)
 }
 
@@ -419,4 +418,48 @@ nav.fixed {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+#contact-me h1 {
+    margin-bottom: 1rem;
+}
+
+#contact-me p {
+    margin-bottom: 1.5rem;
+    color: var(--element-color);
+}
+
+#contact-me form {
+    min-width: 30rem;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+#contact-me input, #contact-me textarea  {
+    width: 100%;
+    background-color: var(--darker-background);
+    color: white;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.1rem;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+}
+
+#submit {
+    margin-top: 0.2rem;
+    display: inline-block;
+    border: white 1px solid !important;
+    width: unset !important;
+    padding: 0.5rem 1.5rem !important;
+    float: right;
+}
+
+#submit:hover {
+    background-color: var(--element-color);
+    border-color: #6193db !important;
+}
+
+#success {
+    display: none;
 }

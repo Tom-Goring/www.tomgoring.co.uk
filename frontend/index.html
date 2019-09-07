@@ -240,12 +240,24 @@
     </div>
 </section>
 
-<section id="contact-me"> <!-- TODO: Add and populate contact me section -->
+<section id="contact-me">
     <svg class="svg-header" preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
     </svg>
 
-
+    <div class="container flex has-text-white has-text-centered">
+        <h1 class="is-size-2">Contact Me</h1>
+        <p class="is-size-5">Have any questions or want to get in touch with me?</p>
+        <form class="contact-form">
+            <input placeholder="Name" type="text" name="name" required="">
+            <input placeholder="Enter email" type="email" name="email" required="">
+            <textarea placeholder="Your message" type="text" name="message"></textarea>
+            <div id="success">Placeholder</div>
+            <input id="submit" type="submit" value="SUBMIT">
+        </form>
+        <!-- TODO: Add backend for submitting emails with this -->
+        <!-- TODO: Add footer with socmed links -->
+    </div>
 </section>
 
 <script src="index/canvas.js"></script>
