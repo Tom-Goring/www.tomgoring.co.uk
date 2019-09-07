@@ -408,34 +408,34 @@ nav.fixed {
 
 /*********************************************************************************************************************/
 
-#contact-me {
+#contact {
     padding: 10rem 0 16rem 0;
     height: auto;
     background-color: var(--dark-background)
 }
 
-#contact-me .svg-header {
+#contact .svg-header {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#contact-me h1 {
+#contact h1 {
     margin-bottom: 1rem;
 }
 
-#contact-me p {
+#contact p {
     margin-bottom: 1.5rem;
     color: var(--element-color);
 }
 
-#contact-me form {
+#contact form {
     min-width: 30rem;
     margin-left: 33%;
     margin-right: 33%;
 }
 
-#contact-me input, #contact-me textarea  {
+#contact input, #contact textarea  {
     width: 100%;
     background-color: var(--darker-background);
     color: white;
