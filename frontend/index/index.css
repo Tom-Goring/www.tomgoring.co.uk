@@ -103,6 +103,7 @@ ul li ul {
     margin-bottom: 4rem;
 }
 
+
 #hero-page .text {
     font-size: 3.5rem;
     color: white;
@@ -121,6 +122,18 @@ ul li ul {
     border: 2px solid white;
     z-index: 1;
 }
+
+@media only screen and (max-width: 570px) {
+    #hero-page .text {
+        font-size: 2rem !important;
+    }
+
+    #hero-page button {
+        font-size: 1.2rem;
+    }
+}
+
+
 
 #hero-page button:hover {
     background-color: var(--element-color);
@@ -167,6 +180,12 @@ nav.fixed {
     color: var(--light-background);
     text-align: left;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width: 470px) {
+    .nav-els > * {
+        font-size: .6rem;
+    }
 }
 
 /*********************************************************************************************************************/
@@ -271,6 +290,7 @@ nav.fixed {
 
 #timeline {
     background-color: whitesmoke;
+    padding-top: 4rem;
 }
 
 #timeline strong {
