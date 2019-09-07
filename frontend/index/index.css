@@ -132,8 +132,6 @@ ul li ul {
     }
 }
 
-
-
 #hero-page button:hover {
     background-color: var(--element-color);
     border-color: var(--element-color);
@@ -252,7 +250,7 @@ nav.fixed {
     }
 
     #skills .column:last-child {
-        border-bottom: 1px solid #E6ECF8;
+        border-top: 1px solid #E6ECF8;
     }
 }
 
