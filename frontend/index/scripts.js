@@ -36,9 +36,8 @@ $(function() {
 
         // Sticky Nav on Mobile
         if (isMobile) {
+            $("#hero-page").css("margin-bottom", 0);
             nav.addClass('fixed');
-        } else {
-            nav.addClass('desk');
         }
 
         if (!isMobile) {
