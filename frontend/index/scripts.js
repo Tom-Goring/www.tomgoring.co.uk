@@ -45,7 +45,6 @@ $(function() {
         }
 
         if (!isMobile) {
-
             // handle loading into page at non top position
             let pos = $(window).scrollTop();
             if (pos > $(window).height()) {
@@ -53,7 +52,6 @@ $(function() {
             } else {
                 nav.removeClass('fixed');
             }
-
             // add scroll callback to detach nav bar into fixed position
             $(window).on('scroll', function () {
                 let pos = $(window).scrollTop();
@@ -65,6 +63,29 @@ $(function() {
                 }
             });
         }
+
+        let navElements = $(".nav-els");
+        let change = true;
+        navElements.children().each(function () {
+            $(this).hover(
+                function() {
+                    if ($(this).hasClass("active")) {
+                        change = false;
+                    } else {
+                        $(this).addClass("active");
+                    }
+                }, function() {
+                    if (change) {
+                        $(this).removeClass("active");
+                    }
+                    else {
+                        change = true;
+                    }
+                });
+        });
+
+        let navChildren = navElements.children();
+
     });
 
 });
