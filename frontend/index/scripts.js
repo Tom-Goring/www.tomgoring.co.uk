@@ -16,7 +16,6 @@ $(function() {
         slideButtons.each(function() {
             let width = $(this).next(".slide-panel").outerWidth();
             $(this).next(".slide-panel").hide();
-            console.log(width);
             $(this).css("width", width);
 
         });
@@ -39,7 +38,7 @@ $(function() {
 
         // Sticky Nav on Mobile
         if (isMobile) {
-            $("#hero-page").addClass("no-bottom-margin");
+            $("#home").addClass("no-bottom-margin");
             nav.addClass('fixed');
             $("#about").css("padding-top", "4rem");
         }
@@ -47,6 +46,7 @@ $(function() {
         if (!isMobile) {
             // handle loading into page at non top position
             let pos = $(window).scrollTop();
+
             if (pos > $(window).height()) {
                 nav.addClass('fixed');
             } else {
@@ -60,6 +60,22 @@ $(function() {
                     nav.addClass('fixed');
                 } else {
                     nav.removeClass('fixed');
+                }
+
+                if (pos + 125 > $("#home").offset().top) {
+                    setActiveLink('home');
+                }
+                if (pos + 125 > $("#about").offset().top) {
+                    setActiveLink('about');
+                }
+                if (pos + 125 > $("#skills").offset().top) {
+                    setActiveLink('skills');
+                }
+                if (pos + 125 > $("#timeline").offset().top) {
+                    setActiveLink('timeline');
+                }
+                if (pos + 220 > $("#projects").offset().top) {
+                    setActiveLink('projects');
                 }
             });
         }
@@ -81,12 +97,18 @@ $(function() {
                     else {
                         change = true;
                     }
-                });
+                }
+            );
         });
-
-        let navChildren = navElements.children();
-
     });
 
+    function setActiveLink(anchor) {
+        $("nav .active").removeClass("active");
+        $("nav").find('[data-dest=' + anchor + ']').addClass("active");
+    }
 });
+
+
+
+
 

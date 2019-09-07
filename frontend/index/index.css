@@ -97,7 +97,7 @@ ul li ul {
 
 /*********************************************************************************************************************/
 
-#hero-page {
+#home {
     min-height: 100vh;
 }
 
@@ -110,11 +110,11 @@ ul li ul {
     height: 100%;
 }
 
-#hero-page {
+#home {
     margin-bottom: 4rem;
 }
 
-#hero-page .text {
+#home .text {
     font-size: 3.5rem;
     color: white;
     text-align: center;
@@ -122,7 +122,7 @@ ul li ul {
     z-index: 1;
 }
 
-#hero-page button {
+#home button {
     cursor: pointer;
     color: white;
     background: 0 0;
@@ -134,26 +134,26 @@ ul li ul {
 }
 
 @media only screen and (max-width: 570px) {
-    #hero-page .text {
+    #home .text {
         font-size: 2rem !important;
     }
 
-    #hero-page button {
+    #home button {
         font-size: 1.2rem;
     }
 }
 
-#hero-page button:hover {
+#home button:hover {
     background-color: var(--element-color);
     border-color: var(--element-color);
 }
 
-#hero-page button svg {
+#home button svg {
     margin-left: 0.9rem;
     transition: transform .3s;
 }
 
-#hero-page button:hover svg {
+#home button:hover svg {
     transform: rotate(90deg);
 }
 
@@ -188,6 +188,7 @@ nav.fixed {
     color: var(--light-background);
     text-align: left;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 470px) {
@@ -352,6 +353,7 @@ nav.fixed {
 
 #projects {
     margin-top: 4rem;
+    min-height: 80vh;
 }
 
 .project {

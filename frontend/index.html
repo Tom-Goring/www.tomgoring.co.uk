@@ -30,7 +30,7 @@
 
 <!-- TODO: Think about adding something extra to the hero page? -->
 <!-- TODO: Add actual links to the nav bar -->
-<section class="flex" id="hero-page">
+<section class="flex" id="home">
     <div class="canvas">
         <canvas id="canvas"></canvas>
     </div>
@@ -43,11 +43,12 @@
     <button><span>Find out more</span><i class="fas fa-arrow-right"></i></button>
     <nav class="flex">
         <div class="nav-els">
-            <div class="active">home</div>
-            <div>about</div>
-            <div>timeline</div>
-            <div>projects</div>
-            <div>contact</div>
+            <div data-dest="home" class="active">home</div>
+            <div data-dest="about">about</div>
+            <div data-dest="skills">skills</div>
+            <div data-dest="timeline">timeline</div>
+            <div data-dest="projects">projects</div>
+            <div data-dest="contact">contact</div>
         </div>
     </nav>
 </section>
