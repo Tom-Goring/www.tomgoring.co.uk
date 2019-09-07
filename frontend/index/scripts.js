@@ -36,7 +36,7 @@ $(function() {
 
         // Sticky Nav on Mobile
         if (isMobile) {
-            $("#hero-page").css("margin-bottom", 0);
+            $("#hero-page").addClass("no-bottom-margin");
             nav.addClass('fixed');
         }
 
