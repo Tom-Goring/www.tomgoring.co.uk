@@ -52,6 +52,7 @@ $(function() {
             } else {
                 nav.removeClass('fixed');
             }
+
             // add scroll callback to detach nav bar into fixed position
             $(window).on('scroll', function () {
                 let pos = $(window).scrollTop();
@@ -77,6 +78,13 @@ $(function() {
                 if (pos + 220 > $("#projects").offset().top) {
                     setActiveLink('projects');
                 }
+            });
+
+            $(".scroll-position").click(function () {
+                let scrollTarget = $(this).attr("data-dest");
+                $('html, body').animate({
+                    scrollTop: $('#' + scrollTarget).offset().top - 50
+                }, 400);
             });
         }
 
