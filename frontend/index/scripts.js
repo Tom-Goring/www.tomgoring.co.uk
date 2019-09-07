@@ -1,56 +1,68 @@
 $(function() {
 
-    let timeline = $(".timeline");
-    let startingHeight = timeline.height();
-    timeline.css("min-height", startingHeight);
+    // ensure collapsed module sections don't affect the total height of the timeline
+    $(function handleTimeline() {
+        let timeline = $(".timeline");
+        let startingHeight = timeline.height();
+        timeline.css("min-height", startingHeight);
 
-    let timelineContent = $(".timeline-content");
-    timelineContent.each(function() {
-        let height = $(this).height();
-        console.log(height);
-        $(this).css("min-height", height);
-        $(this).css("max-height", height);
-        console.log($(this).css("min-height"));
+        let timelineContent = $(".timeline-content");
+        timelineContent.each(function() {
+            let height = $(this).outerHeight();
+            $(this).css("min-height", height);
+        });
+
+        let slideButtons = $(".slideButton");
+        slideButtons.each(function() {
+            let width = $(this).next(".slide-panel").width();
+            $(this).css("width", width);
+        });
+
+        slideButtons.click(function() {
+            let parent = $(this).parent();
+            parent = parent.parent();
+            let slide = $(this).next();
+            slide.slideToggle();
+        });
     });
 
-    let slideButtons = $(".slideButton");
-    slideButtons.each(function() {
-        let width = $(this).next(".slide-panel").width();
-        $(this).css("width", width);
-    });
+    $(function handleNavBar() {
+        let isMobile;
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            isMobile = true;
+        }
 
-    let isMobile;
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        isMobile = true;
-    }
+        let nav = $('nav');
 
-    let nav = $('nav');
+        // Sticky Nav on Mobile
+        if (isMobile) {
+            nav.addClass('fixed');
+        } else {
+            nav.addClass('desk');
+        }
 
-    // Sticky Nav on Mobile
-    if (isMobile) {
-        nav.addClass('fixed');
-    } else {
-        nav.addClass('desk');
-    }
+        if (!isMobile) {
 
-    if (!isMobile) {
-        $(window).on('scroll', function () {
+            // handle loading into page at non top position
             let pos = $(window).scrollTop();
-
             if (pos > $(window).height()) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
             }
-        });
-    }
 
-    slideButtons.click(function() {
-        let parent = $(this).parent();
-        parent = parent.parent();
-        console.log(parent);
-        let slide = $(this).next();
-        slide.slideToggle();
+            // add scroll callback to detach nav bar into fixed position
+            $(window).on('scroll', function () {
+                let pos = $(window).scrollTop();
+
+                if (pos > $(window).height()) {
+                    nav.addClass('fixed');
+                } else {
+                    nav.removeClass('fixed');
+                }
+            });
+        }
     });
+
 });
 
