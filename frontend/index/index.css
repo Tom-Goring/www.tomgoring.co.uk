@@ -338,3 +338,9 @@ nav.fixed {
     -ms-transition: none;
     transition: none;
 }
+
+@media only screen and (max-width: 360px) {
+    #timeline {
+        font-size: 50%;
+    }
+}
