@@ -38,6 +38,7 @@ $(function() {
         if (isMobile) {
             $("#hero-page").addClass("no-bottom-margin");
             nav.addClass('fixed');
+            $("#about").css("padding-top", "4rem");
         }
 
         if (!isMobile) {
