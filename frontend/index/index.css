@@ -38,6 +38,13 @@ ul li ul {
     align-items: center;
 }
 
+.is-abs-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .is-secondary {
     color: var(--highlight-color);
 }
@@ -298,10 +305,6 @@ nav.fixed {
     margin-bottom: 1rem;
 }
 
-#projects {
-    min-height: 100vh;
-}
-
 .heading {
     font-size: 1.1rem;
 }
@@ -343,4 +346,58 @@ nav.fixed {
     #timeline {
         font-size: 50%;
     }
+}
+
+/*********************************************************************************************************************/
+
+#projects {
+    margin-top: 4rem;
+}
+
+.project {
+    width: 30em;
+    max-width: 100%;
+    height: 18em;
+    background-size: cover;
+    background: no-repeat center;
+    border-radius: 12px;
+    border: 1px solid #d3d3d3;
+}
+
+.project.one {
+    background-image: url("../images/website.png");
+    background-size: 100% 100%;
+}
+
+.project.two {
+    background-image: url("../images/GitHub-Mark-120px-plus.png");
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    background-color: #293347;
+    opacity: 0;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.project a {
+    color: white;
+    background: none;
+    border-radius: 60px;
+    border: solid 2px var(--highlight-color);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+}
+
+.project a:hover {
+    background-color: #c01b47;
+}
+
+.project .overlay p {
+    margin-bottom: 1rem;
 }
