@@ -2,7 +2,7 @@
 Description=listening on port 3420 for GitHub repo push webhook
 
 [Service]
-ExecStart=/usr/bin/python /usr/share/nginx/html/tools/webhook-http-detector.py
+ExecStart=/usr/bin/python /home/ec2-user/www.tomgoring.co.uk/tools/webhooks/webhook-http-detector.py
 
 [Install]
 WantedBy=multi-user.target

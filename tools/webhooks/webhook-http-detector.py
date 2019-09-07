@@ -30,6 +30,6 @@ while 1:
     +"Webhook detected successfully!\n");
     conn.close()
 
-    os.chdir('/usr/share/nginx/html')
+    os.chdir('/home/ec2-user/www.tomgoring.co.uk/')
     os.system('git pull')
 s.close()
