@@ -354,8 +354,13 @@ nav.fixed {
 /*********************************************************************************************************************/
 
 #projects {
+    top: -8rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+}
+
+#projects .container {
+    top: 8rem;
 }
 
 .project {
