@@ -12,6 +12,7 @@
     box-sizing: border-box;
     transition: all .5s;
     font-family: 'Lato', sans-serif;
+    max-width: 100vw;
 }
 
 body {
@@ -419,6 +420,10 @@ nav.fixed {
     background-color: var(--dark-background)
 }
 
+#contact .container {
+    max-width: 100%;
+}
+
 #contact .svg-header {
     position: absolute;
     top: 0;
@@ -435,9 +440,15 @@ nav.fixed {
 }
 
 #contact form {
-    min-width: 30rem;
-    margin-left: 33%;
-    margin-right: 33%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@media only screen and (max-width: 570px) {
+    #contact form {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 
 #contact input, #contact textarea {
@@ -499,4 +510,10 @@ nav.fixed {
 
 .social-connections a:hover svg {
     color: var(--element-color);
+}
+
+@media only screen and (max-width: 570px) {
+    .social-connections {
+        font-size: 2rem;
+    }
 }
