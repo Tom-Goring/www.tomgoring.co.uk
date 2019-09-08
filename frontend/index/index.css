@@ -478,3 +478,20 @@ nav.fixed {
 #success {
     display: none;
 }
+
+.social-connections {
+    margin-top: 4rem;
+    font-size: 4rem;
+}
+
+.social-connections a {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+.social-connections svg {
+    color: white;
+}
+
+.social-connections a:hover svg {
+    color: var(--element-color);
+}
