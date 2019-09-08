@@ -114,6 +114,15 @@ $(function() {
         $("nav .active").removeClass("active");
         $("nav").find('[data-dest=' + anchor + ']').addClass("active");
     }
+
+    // form submission without leaving page
+    let form = $('form');
+    form.submit(function() {
+        $.post($(this).attr('action'), $(this).serialize(), function(response) {
+            console.log(response);
+        }, 'json');
+        return false;
+    });
 });
 
 

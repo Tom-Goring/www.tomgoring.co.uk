@@ -1,13 +1,17 @@
 require('dotenv').config();
-const express = require('express');
+
 const nodemailer = require('nodemailer');
+
+const express = require('express');
 const app = express();
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
+
 const port = process.env.port || 3000;
- 
-app.post("/contactMe",function(req,res)
-{
+
+// POST route from contact form
+app.post('/contactMe', function (req, res) {
     let mailOpts, smtpTrans;
     smtpTrans = nodemailer.createTransport({
         host: 'smtp.gmail.com',
@@ -22,19 +26,22 @@ app.post("/contactMe",function(req,res)
         from: req.body.name + ' &lt;' + req.body.email + '&gt;',
         to: process.env.GMAIL_USER,
         subject: 'New message from contact form at tomgoring.co.uk',
-        text: `${req.body.name} (${req.body.email}) says :${req.body.message}`
+        text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
     };
     smtpTrans.sendMail(mailOpts, function (error, response) {
         if (error) {
-            res.render('contact-failure');
-        } else {
-            res.render('contact-success');
+            res.sendStatus(501);
+            res.end();
+        }
+        else {
+            res.sendStatus(200);
+            res.end();
         }
     });
 });
  
 app.listen(port, function () {
-    var datetime = new Date();
-    var message = "Server running on Port:- " + port + " Started at :- " + datetime;
+    let datetime = new Date();
+    let message = "Server running on Port:- " + port + " Started at :- " + datetime;
     console.log(message);
 });
