@@ -1,0 +1,19 @@
+{
+  "name": "api.tomgoring.co.uk",
+  "version": "1.0.0",
+  "description": "API for my personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tom-Goring/www.tomgoring.co.uk.git"
+  },
+  "author": "Tom Goring",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tom-Goring/www.tomgoring.co.uk/issues"
+  },
+  "homepage": "https://github.com/Tom-Goring/www.tomgoring.co.uk#readme"
+}
