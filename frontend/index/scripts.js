@@ -43,6 +43,13 @@ $(function() {
             $("#about").css("padding-top", "4rem");
         }
 
+        $(document).on('click touch', ".page-link", function() {
+            let scrollTarget = $(this).attr("data-dest");
+            $("html, body").stop().animate({
+                scrollTop: $('#' + scrollTarget).offset().top - 50
+            }, 400);
+        });
+
         if (!isMobile) {
             // handle loading into page at non top position
             let pos = $(window).scrollTop();
@@ -78,13 +85,6 @@ $(function() {
                 if (pos + 220 > $("#projects").offset().top) {
                     setActiveLink('projects');
                 }
-            });
-
-            $(".page-link").click(function () {
-                let scrollTarget = $(this).attr("data-dest");
-                $('html, body').animate({
-                    scrollTop: $('#' + scrollTarget).offset().top - 50
-                }, 400);
             });
         }
 
