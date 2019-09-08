@@ -80,7 +80,7 @@ $(function() {
                 }
             });
 
-            $(".scroll-position").click(function () {
+            $(".page-link").click(function () {
                 let scrollTarget = $(this).attr("data-dest");
                 $('html, body').animate({
                     scrollTop: $('#' + scrollTarget).offset().top - 50
@@ -88,7 +88,7 @@ $(function() {
             });
         }
 
-        let navElements = $(".nav-els");
+        let navElements = $(".link-wrap");
         let change = true;
         navElements.children().each(function () {
             $(this).hover(
@@ -146,6 +146,12 @@ $(function() {
                 }, 3500);
             }
         })
+    });
+
+    let burgerIcon = $('#menu-icon-wrapper');
+    console.log(burgerIcon);
+    burgerIcon.click(function() {
+        $('.link-wrap').toggleClass('visible');
     });
 });
 

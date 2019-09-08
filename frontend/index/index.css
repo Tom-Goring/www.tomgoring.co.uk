@@ -169,6 +169,7 @@ nav {
     background: var(--darker-background);
     border-bottom: 3px solid var(--element-color);
     z-index: 100;
+    transition: none;
 }
 
 nav.fixed {
@@ -176,25 +177,72 @@ nav.fixed {
     left: 0;
 }
 
-.nav-els {
+.link-wrap {
     text-align: left;
     width: 100%;
     max-width: 1200px;
+    transition: none;
 }
 
-.nav-els > * {
-    font-size: 1.2rem;
-    margin: 0 1rem 0 1rem;
-    display: inline;
-    color: var(--light-background);
-    text-align: left;
-    text-transform: uppercase;
+.menu-icon {
+    position: absolute;
+    right: 5vw;
+    margin: auto 0;
+    font-size: 2rem;
+    top: 1rem;
+    z-index: 99;
+    color: white;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 470px) {
-    .nav-els > * {
-        font-size: .6rem;
+.visible {
+    height: 11rem !important;
+}
+
+@media only screen and (min-width: 600px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .link-wrap {
+        position: absolute;
+        width: 100%;
+        top: 4rem;
+        overflow: hidden;
+        height: 0;
+        transition: height .3s ease-out;
+        background: var(--darker-background);
+    }
+
+    .page-link {
+        font-size: 1.2rem;
+        margin: 0 1rem 0 1rem;
+        color: var(--light-background);
+        text-align: left;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .link-wrap {
+        position: initial;
+        background: none;
+        overflow: visible;
+        height: initial;
+        text-align: left;
+    }
+
+    .page-link {
+        font-size: 1.2rem;
+        margin: 0 1rem 0 1rem;
+        display: inline;
+        color: var(--light-background);
+        text-align: left;
+        text-transform: uppercase;
+        cursor: pointer;
     }
 }
 
