@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
 const port = process.env.port || 3000;
  
-app.get("/contactMe",function(request,response)
+app.post("/contactMe",function(request,response)
 {
     let mailOpts, smtpTrans;
     smtpTrans = nodemailer.createTransport({
