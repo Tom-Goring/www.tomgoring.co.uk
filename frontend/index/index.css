@@ -435,7 +435,7 @@ nav.fixed {
     margin-right: 33%;
 }
 
-#contact input, #contact textarea  {
+#contact input, #contact textarea {
     width: 100%;
     background-color: var(--darker-background);
     color: white;
@@ -450,15 +450,29 @@ nav.fixed {
 #submit {
     margin-top: 0.2rem;
     display: inline-block;
-    border: white 1px solid !important;
+    border: white 1px solid;
     width: unset !important;
-    padding: 0.5rem 1.5rem !important;
+    padding: 0.5rem 1.5rem;
     float: right;
+}
+
+.has-white-border {
+    border: white 1px solid !important;
 }
 
 #submit:hover {
     background-color: var(--element-color);
     border-color: #6193db !important;
+}
+
+.success {
+    background-color: #23d160 !important;
+    border-color: #21a854 !important;
+}
+
+.failure {
+    background-color: #ff1d31 !important;
+    border-color: #c41b2a !important;
 }
 
 #success {

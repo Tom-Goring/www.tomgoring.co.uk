@@ -30,12 +30,16 @@ app.post('/contactMe', function (req, res) {
     };
     smtpTrans.sendMail(mailOpts, function (error, response) {
         if (error) {
-            res.sendStatus(501);
-            res.end();
+            res.header("Access-Control-Allow-Origin", "*");
+            res.json({"message":"Failed to send mail for some reason."});
+            res.json({"statusCode":"500"});
+            res.sendStatus(500);
         }
         else {
+            res.header("Access-Control-Allow-Origin", "*");
+            res.json({"message":"Mail sent successfully"});
+            res.json({"statusCode":"200"});
             res.sendStatus(200);
-            res.end();
         }
     });
 });

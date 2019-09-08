@@ -117,11 +117,35 @@ $(function() {
 
     // form submission without leaving page
     let form = $('form');
-    form.submit(function() {
-        $.post($(this).attr('action'), $(this).serialize(), function(response) {
-            console.log(response);
-        }, 'json');
-        return false;
+    form.submit(function(event) {
+        event.preventDefault();
+        let post_url = $(this).attr('action');
+        let request_method = $(this).attr('method');
+        let form_data = $(this).serialize();
+
+        let response = $.ajax({
+            url : post_url,
+            type: request_method,
+            data: form_data,
+            success: function(data, textStatus, xhr) {
+                console.log("success");
+                console.log(xhr);
+                let submit = $('#submit');
+                submit.addClass('success');
+                setTimeout(function() {
+                    submit.removeClass('success')
+                }, 3500);
+            },
+            error: function(data, textStatus, xhr) {
+                console.log("error");
+                console.log(xhr);
+                let submit = $('#submit');
+                submit.addClass('failure');
+                setTimeout(function() {
+                    submit.removeClass('failure')
+                }, 3500);
+            }
+        })
     });
 });
 
