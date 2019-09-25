@@ -69,7 +69,7 @@ $(function() {
 			if (pos + 220 > $("#projects").offset().top) {
 				setActiveLink('projects');
 			}
-			if (pos + 220 > $("#contact").offset().top) {
+			if (pos + 400 > $("#contact").offset().top) {
 				setActiveLink('contact');
 			}
 		});
@@ -136,8 +136,6 @@ $(function() {
             type: request_method,
             data: form_data,
             success: function(data, textStatus, xhr) {
-                console.log("success");
-                console.log(xhr);
                 let submit = $('#submit');
                 submit.addClass('success');
                 setTimeout(function() {
@@ -145,8 +143,6 @@ $(function() {
                 }, 3500);
             },
             error: function(data, textStatus, xhr) {
-                console.log("error");
-                console.log(xhr);
                 let submit = $('#submit');
                 submit.addClass('failure');
                 setTimeout(function() {
@@ -157,7 +153,6 @@ $(function() {
     });
 
     let burgerIcon = $('#menu-icon-wrapper');
-    console.log(burgerIcon);
     burgerIcon.click(function() {
         $('.link-wrap').toggleClass('visible');
     });
