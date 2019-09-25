@@ -45,27 +45,34 @@ $(function() {
 		}
 
         $(document).on('click touch', ".page-link", function() {
-            let scrollTarget = $(this).attr("data-dest");
+			let scrollTarget = $(this).attr("data-dest");
+			setActiveLink(scrollTarget);
             $("html, body").stop().animate({
                 scrollTop: $('#' + scrollTarget).offset().top - 50
             }, 400);
-        });
-
-        if (pos + 125 > $("#home").offset().top) {
-            setActiveLink('home');
-        }
-        if (pos + 125 > $("#about").offset().top) {
-            setActiveLink('about');
-        }
-        if (pos + 125 > $("#skills").offset().top) {
-            setActiveLink('skills');
-        }
-        if (pos + 125 > $("#timeline").offset().top) {
-            setActiveLink('timeline');
-        }
-        if (pos + 220 > $("#projects").offset().top) {
-            setActiveLink('projects');
-        }
+		});
+		
+		$(window).on('scroll', function () {
+			pos = $(window).scrollTop();
+			if (pos + 125 > $("#home").offset().top) {
+				setActiveLink('home');
+			}
+			if (pos + 125 > $("#about").offset().top) {
+				setActiveLink('about');
+			}
+			if (pos + 125 > $("#skills").offset().top) {
+				setActiveLink('skills');
+			}
+			if (pos + 125 > $("#timeline").offset().top) {
+				setActiveLink('timeline');
+			}
+			if (pos + 220 > $("#projects").offset().top) {
+				setActiveLink('projects');
+			}
+			if (pos + 220 > $("#contact").offset().top) {
+				setActiveLink('contact');
+			}
+		});
 
         if (!isMobile) {
             // handle loading into page at non top position
