@@ -41,7 +41,9 @@ $(function() {
             $("#home").addClass("no-bottom-margin");
             nav.addClass('fixed');
             $("#about").css("padding-top", "4rem");
-        }
+		}
+		
+		
 
         $(document).on('click touch', ".page-link", function() {
             let scrollTarget = $(this).attr("data-dest");
