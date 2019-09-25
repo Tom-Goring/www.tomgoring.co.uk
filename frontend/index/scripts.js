@@ -34,7 +34,8 @@ $(function() {
             isMobile = true;
         }
 
-        let nav = $('nav');
+		let nav = $('nav');
+		let pos = $(window).scrollTop();
 
         // Sticky Nav on Mobile
         if (isMobile) {
@@ -42,8 +43,6 @@ $(function() {
             nav.addClass('fixed');
             $("#about").css("padding-top", "4rem");
 		}
-		
-		
 
         $(document).on('click touch', ".page-link", function() {
             let scrollTarget = $(this).attr("data-dest");
