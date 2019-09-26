@@ -31,5 +31,6 @@ while 1:
     conn.close()
 
     os.chdir('/home/ec2-user/www.tomgoring.co.uk/')
-    os.system('git pull')
+    os.system('git fetch --all')
+	os.system('git reset --hard origin/WebAssembly')
 s.close()
