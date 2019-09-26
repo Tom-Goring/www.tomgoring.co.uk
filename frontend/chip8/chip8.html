@@ -3,28 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Chip8 Emulator | Rust -> WebAssembly</title>
-    <style>
-      body {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-		background-color: black;
-      }
-    </style>
+	<link rel="stylesheet" href="./chip8.css">
   </head>
   <body>
 	<noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
-	<h1>Experimental - may break and require reloading</h1>
-	<input type="file" id="files">
-    <canvas id="chip8-canvas" tabindex="1"></canvas>
-	<button id="play-pause"></button>
-	<button id="reset">Reset</button>
+	<div class="flex">
+		<h1>Experimental - may break and require reloading</h1>
+		<p>Select a .ch8 file for the Chip8 emulator using the browse button - input keys are 1-4, Q-R, A-F, & Z-V, but actual game keys are game specific so you'll just have to experiment.</p>
+		<input type="file" id="files">
+		<canvas id="chip8-canvas" tabindex="1"></canvas>
+		<button id="reset">Reset</button>
+	</div>
     <script src="./bootstrap.js"></script>
   </body>
 </html>
